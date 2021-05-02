@@ -1,0 +1,21 @@
+{
+  "name": "SEDATIF",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mspr-maintenance-evolutive/SEDATIF",
+  "author": "cbarange",
+  "license": "MIT",
+  "scripts":{
+    "dev":"nodemon -L",
+    "start":"node index.js",
+    "test": "echo Test ✔"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
