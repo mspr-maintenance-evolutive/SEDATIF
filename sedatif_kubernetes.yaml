@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sedatif-service
+  labels:
+    app: sedatif
+spec:
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80
+  selector:
+    app: sedatif
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sedatif-deployment
+  labels:
+    app: sedatif
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sedatif
+  template:
+    metadata:
+      labels:
+        app: sedatif
+    spec:
+      containers:
+      - name: sedatif
+        image: cbarange/mspr-maintenance-evolutive-sedatif:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: sedatif-ingress
+spec:
+  entrypoints:
+   - https
+  routes:
+  - match: Host(`sedatif.domain.com`)
+    kind: Rule
+    services:
+    - name: sedatif-service
+      port: 80
+  tls:
+    certResolver: letsencrypt
