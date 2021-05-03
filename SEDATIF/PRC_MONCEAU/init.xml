@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>PRC_MONCEAU</Id>
+			<Nom>Parc Monceau</Nom>
+			<Adresse>35 Boulevard de Courcelles, 75008 Paris</Adresse>
+		</Espace>
+		<Tache>
+			<Nom>Pose isolant mousse</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>16-02-1977</DateFin>
+		</Tache>
+		<Tache>
+			<Nom>Toitures kiosques</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>18-08-1977</DateFin>
+		</Tache>
+	</Chantier>
+</Document>

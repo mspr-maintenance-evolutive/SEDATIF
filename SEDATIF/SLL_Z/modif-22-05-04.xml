@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>SLL_Z</Id>
+			<Adresse>IGC - 86 Rue Regnault, 75013 Paris</Adresse>
+		</Espace>
+		<Tache>
+			<Nom>Évacuation caddies</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>11-06-2009</DateFin>
+		</Tache>
+		<Tache>
+			<Nom>Évacuation Vélib</Nom>
+			<Etat>En cours</Etat>
+			<DateFin>31-07-2008</DateFin>
+		</Tache>
+	</Chantier>
+</Document>

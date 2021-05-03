@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>RUE_PELC</Id>
+			<Nom>Rue piétonne du Pélican</Nom>
+		</Espace>
+		<Tache>
+			<Nom>Réfection pavés</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>10-08-1999</DateFin>
+		</Tache>
+	</Chantier>
+</Document>

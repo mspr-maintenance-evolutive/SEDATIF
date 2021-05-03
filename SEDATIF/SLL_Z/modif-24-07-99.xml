@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>SLL_Z</Id>
+			<Adresse>Plaque 907, 106 Boulevard du Montparnasse 74014 PARIS</Adresse>
+		</Espace>
+		<Tache>
+			<Nom>Injection béton accès sud</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>10-11-2001</DateFin>
+		</Tache>
+		<Tache>
+			<Nom>Injection béton accès nord</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>03-07-2002</DateFin>
+		</Tache>
+	</Chantier>
+</Document>

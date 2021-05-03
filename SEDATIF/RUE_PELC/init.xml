@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>RUE_PELC</Id>
+			<Nom>Rue piétonne du Poil-au-con</Nom>
+			<Adresse>Rue du Pélican 75001 PARIS</Adresse>
+		</Espace>
+		<Tache>
+			<Nom>Terrassement</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>16-02-1995</DateFin>
+		</Tache>
+	</Chantier>
+</Document>

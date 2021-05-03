@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Chantier>
+		<Espace>
+			<Id>SLL_Z</Id>
+			<Nom>Salle Z</Nom>
+			<Adresse>Plaque Télécom, Port Royal 74014 PARIS</Adresse>
+		</Espace>
+		<Tache>
+			<Nom>Déblaiement</Nom>
+			<Etat>Terminée</Etat>
+			<DateFin>16-02-1960</DateFin>
+		</Tache>
+	</Chantier>
+</Document>
