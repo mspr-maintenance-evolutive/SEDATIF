@@ -7,6 +7,10 @@ const convert = require('xml-js')
 const moment = require('moment')
 const fs = require('fs')
 //moment('16-02-1986','DD-MM-YYYY')
+// Openapi Documentation
+//const openapi = require('openapi-comment-parser')
+//const swagger_ui = require('swagger-ui-express')
+
 
 const app = express()
 
@@ -14,6 +18,8 @@ app.enable('trust proxy')
 app.use(express.json())
 app.use(morgan('common'))
 app.use(cors('*'))
+//app.use('/docs', swagger_ui.serve, swagger_ui.setup(openapi()))
+
 
 const get_inWork_works = taches => taches.filter(e=>e.Etat._text=='En cours')
 const convert_tache_as_array = taches => Array.isArray(taches)?taches:[taches]
@@ -78,6 +84,11 @@ async function get_spaces() {
   return result
 }
 
+/**
+ * GET /espaces/travaux
+ * @summary Renvoie un CSV des espaces en travaux
+ * @response 200 - OK
+ */
 app.get('/espaces/travaux', async (req, res) => {
   res.setHeader('content-type', 'text/csv')
   res.setHeader('Content-Disposition', 'attachment;filename=espaces_travaux.csv')
@@ -85,6 +96,11 @@ app.get('/espaces/travaux', async (req, res) => {
   res.send(['Nom;Adresse;DateFinTravaux',...works.map(e=>`${e.nom};${e.adresse};${e.date_fin}`)].join`\n`)
 })
 
+/**
+ * GET /espaces/ouverts
+ * @summary Renvoie un CSV des espaces ouverts
+ * @response 200 - OK
+ */
 app.get('/espaces/ouverts', async (req, res) => {
   res.setHeader('content-type', 'text/csv')
   res.setHeader('Content-Disposition', 'attachment;filename=espaces_ouverts.csv')
@@ -95,3 +111,5 @@ app.get('/espaces/ouverts', async (req, res) => {
 
 const port = process.env.PORT || 5225
 const server = app.listen(port, () => console.log(`Listening at http://localhost:${port}`))
+
+module.exports = {app:app, server:server}
