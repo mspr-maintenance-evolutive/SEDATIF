@@ -89,7 +89,7 @@ app.get('/espaces/ouverts', async (req, res) => {
   res.setHeader('content-type', 'text/csv')
   res.setHeader('Content-Disposition', 'attachment;filename=espaces_ouverts.csv')
   const works = await get_spaces()
-  res.send(['Nom;Adresse;DateFinTravaux',...works.map(e=>`${e.nom};${e.adresse}`)].join`\n`)
+  res.send(['Nom;Adresse',...works.map(e=>`${e.nom};${e.adresse}`)].join`\n`)
 })
 
 
