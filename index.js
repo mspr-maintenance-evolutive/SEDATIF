@@ -86,6 +86,15 @@ async function get_spaces() {
 }
 
 /**
+ * GET /
+ * @summary Home endpoint
+ * @response 200 - OK
+ */
+app.get('/', async (req, res) => {
+  res.send("Welcome on API SEDATIF")
+})
+
+/**
  * GET /espaces/travaux
  * @summary Renvoie un CSV des espaces en travaux
  * @response 200 - OK
